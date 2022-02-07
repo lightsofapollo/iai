@@ -143,7 +143,7 @@ fn run_bench(
         .arg("--iai-run")
         .arg(i.to_string())
         .stdout(Stdio::null())
-        .stderr(Stdio::null())
+        .stderr(Stdio::inherit())
         .status()
         .expect("Failed to run benchmark in cachegrind");
 
